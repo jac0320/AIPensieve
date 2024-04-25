@@ -1,8 +1,17 @@
 import os
+import PIL
 from PIL import Image
 from PIL.ExifTags import TAGS, GPSTAGS
 import requests
 import folium
+import requests
+import os
+import json
+import pandas as pd
+from datetime import datetime, timezone
+from geopy.geocoders import GoogleV3
+import pytz
+from timezonefinder import TimezoneFinder
 
 
 def get_filenames(folderpath):
@@ -79,3 +88,93 @@ def get_location_by_coordinates(lat, lon):
     data = response.json()
     
     return data
+
+
+def get_historical_weather(lat, lon, date, api_key):
+    """
+    Fetch historical weather data for a specific latitude, longitude, and date.
+    
+    Args:
+    - lat (float): Latitude of the location
+    - lon (float): Longitude of the location
+    - date (str): Date in 'YYYY-MM-DD' format
+    - api_key (str): API key for the OpenWeatherMap API
+    
+    Returns:
+    - DataFrame with weather data or an error message
+    """
+    # Convert date to UNIX timestamp
+    timestamp = int(datetime.strptime(date, '%Y-%m-%d %H:%M:%S').timestamp())
+    
+    # Build the API URL
+    url = f"https://api.openweathermap.org/data/3.0/onecall/timemachine?lat={lat}&lon={lon}&dt={timestamp}&appid={api_key}"
+    
+    # Make the API request
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        data = response.json()
+        # Extract hourly weather data and convert to DataFrame
+        df = pd.DataFrame(data)
+        return df
+    else:
+        return f"Failed to fetch data: {response.text}"
+    
+
+def convert_to_utc_str(time_str):
+    # Parse the datetime string with timezone information
+    dt_with_tz = datetime.strptime(time_str, '%Y:%m:%d %H:%M:%S%z')
+    
+    # Convert to UTC
+    dt_utc = dt_with_tz.astimezone(timezone.utc)
+    
+    # Format the UTC datetime as a string without the timezone offset
+    utc_time_str = dt_utc.strftime('%Y-%m-%d %H:%M:%S')
+    
+    return utc_time_str
+
+
+class CustomEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, PIL.TiffImagePlugin.IFDRational):
+            # Convert IFDRational to a serializable format, e.g., string or float
+            return str(obj)  # or float(obj.numerator) / obj.denominator
+        elif isinstance(obj, bytes):
+            # Convert bytes to a string format, here using base64 to ensure all byte data is accurately encoded
+            import base64
+            return base64.b64encode(obj).decode('utf-8')
+        # Let the base class default method raise the TypeError
+        return json.JSONEncoder.default(self, obj)
+    
+
+def locate_address_google_map(address):
+    
+    # Place your Google API key here
+    api_key = os.getenv('GOOGLEV3_API_KEY')
+    geolocator = GoogleV3(api_key=api_key)
+    location = geolocator.geocode("Silicon Valley, CA")
+    if location:
+        return location.latitude, location.longitude
+    else:
+        print("Location could not be geocoded")
+
+
+def convert_raw_date_to_utc_dt(date_str, latitude, longitude):
+    # Parsing the date string
+    date = datetime.strptime(date_str, '%B %d, %Y')
+
+    # Finding the timezone based on latitude and longitude
+    tf = TimezoneFinder()
+    timezone_str = tf.timezone_at(lat=latitude, lng=longitude)
+    timezone = pytz.timezone(timezone_str)
+
+    # Localize the date to found timezone
+    localized_date = timezone.localize(date)
+
+    # Convert to UTC
+    utc_date = localized_date.astimezone(pytz.utc)
+
+    # Formatting the UTC datetime string
+    utc_date_str = utc_date.strftime('%Y-%m-%d %H:%M:%S')
+    return utc_date_str
+    
