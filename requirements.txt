@@ -1,1 +1,4 @@
 google-generativeai
+chromadb
+streamlit
+pandas
