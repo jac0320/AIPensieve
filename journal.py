@@ -5,6 +5,7 @@ import json
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
 import chromadb
+import sqlite3
 
 __import__('pysqlite3')
 import sys
