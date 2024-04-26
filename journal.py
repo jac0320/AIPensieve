@@ -4,11 +4,12 @@ import pandas as pd
 import json
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
-import sqlite3
 
-__import__('pysqlite3')
 import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+if sys.platform.startswith("linux"):
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 import chromadb
 
