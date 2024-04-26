@@ -6,6 +6,10 @@ import google.generativeai as genai
 import google.ai.generativelanguage as glm
 import chromadb
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 
 DEFAULT_LOCAL_VECTOR_STORE = 'localvs'
 DEFAULT_EMBEDDING_MODEL = 'models/embedding-001'
