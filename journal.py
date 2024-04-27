@@ -41,17 +41,29 @@ def vectorstore(name):
     except ValueError:
         collection = client.create_collection(name=name)
     
-    metadatas = []
-    for _, v in journals.items():
-        metadatas.append({k: v for k,v in v['weather_data'].items() if isinstance(v, str) or isinstance(v, int) or isinstance(v, float) or isinstance(v, bool)})
-    
+
     if collection.count() == 0:
+        metadatas = []
+        embedding_content = []
+        for _, v in journals.items():
+            metadatas.append(
+                {k: v for k,v in v['weather_data'].items() if isinstance(v, str) or isinstance(v, int) or isinstance(v, float) or isinstance(v, bool)}
+            )
+            embedding_content.append(
+                embed_fn(
+                    title=v['title'],
+                    text=v['journal'] + str(v.get('music', '')) + str(v['location_data']) + str(v['weather_data']),
+                    task_type='retrieval_document'
+                )
+            ) 
         collection.add(
             documents=[v['journal'] for _, v in journals.items()],
-            embeddings=[embed_fn(title=v['title'], text=v['journal']) for _, v in journals.items()],
+            embeddings=embedding_content,
             metadatas=metadatas,
             ids=[k for k, _ in journals.items()]
         )
+    
+    return journals
     
 
 def main():
@@ -59,7 +71,7 @@ def main():
     st.title('Journal')
 
     user = st.selectbox(label="User", options=['Site', 'Long'], index=0)
-    vectorstore(user)
+    journals = vectorstore(user)
 
     client = chromadb.PersistentClient(DEFAULT_LOCAL_VECTOR_STORE)
     collection = client.get_collection(name=user)
@@ -68,8 +80,17 @@ def main():
         query_embedding = embed_fn(title="", text=query, task_type="retrieval_query")
         results = collection.query(query_embedding, n_results=2)
         for i in range(len(results['ids'])):
-            st.write(results['ids'][0][i])
-            st.write(results['metadatas'][0][i])
+            journal_key = results['ids'][0][i]
+            if 'media' in journal_key:
+                st.image(journal_key)
+            with st.expander("Moment Music"):
+                st.write(journals[journal_key].get('music', {}))
+            with st.expander("Moment Weather"):
+                st.write(journals[journal_key].get('weather_data', {}))
+            with st.expander("Moment Location"):
+                st.write(journals[journal_key].get('location_data', {}))
+            with st.expander("Moment Metadata"):
+                st.write(journals[journal_key].get('metadata_data', {}))
             st.write(results['documents'][0][i])
         st.write('---')
 
