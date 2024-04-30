@@ -3,7 +3,7 @@ import PIL
 from PIL import Image
 from PIL.ExifTags import TAGS, GPSTAGS
 import requests
-import folium
+import streamlit as st
 import requests
 import os
 import json
@@ -11,7 +11,16 @@ import pandas as pd
 from datetime import datetime, timezone
 from geopy.geocoders import GoogleV3
 import pytz
+import time
 from timezonefinder import TimezoneFinder
+from constants import OPENWEATHER_API_KEY, GOOGLEV3_API_KEY
+
+
+
+def stream_data(response):
+    for word in response.split(" "):
+        yield word + " "
+        time.sleep(0.007)
 
 
 def get_filenames(folderpath):
@@ -30,12 +39,15 @@ def dms_to_decimal(degrees, minutes, seconds, direction):
     return decimal
 
 
-def get_image_metadata(image_path, exclude_tags=None):
-    """ Extracts general EXIF metadata from a JPEG image file if available, excluding specified tags. """
+def get_image_metadata(image, exclude_tags=None):
+    """ 
+        Extracts general EXIF metadata from a JPEG image file if available, excluding specified tags. 
+    """
+    
     if exclude_tags is None:
         exclude_tags = ['MakerNote']  # Default tags to exclude
 
-    with Image.open(image_path) as img:
+    with Image.open(image) as img:
         exif_data = img._getexif()
         if not exif_data:
             return "No EXIF metadata found"
@@ -90,7 +102,7 @@ def get_location_by_coordinates(lat, lon):
     return data
 
 
-def get_historical_weather(lat, lon, date, api_key):
+def get_historical_weather(lat, lon, date):
     """
     Fetch historical weather data for a specific latitude, longitude, and date.
     
@@ -107,7 +119,7 @@ def get_historical_weather(lat, lon, date, api_key):
     timestamp = int(datetime.strptime(date, '%Y-%m-%d %H:%M:%S').timestamp())
     
     # Build the API URL
-    url = f"https://api.openweathermap.org/data/3.0/onecall/timemachine?lat={lat}&lon={lon}&dt={timestamp}&appid={api_key}"
+    url = f"https://api.openweathermap.org/data/3.0/onecall/timemachine?lat={lat}&lon={lon}&dt={timestamp}&appid={OPENWEATHER_API_KEY}"
     
     # Make the API request
     response = requests.get(url)
@@ -149,19 +161,17 @@ class CustomEncoder(json.JSONEncoder):
 
 def locate_address_google_map(address):
     
-    # Place your Google API key here
-    api_key = os.getenv('GOOGLEV3_API_KEY')
-    geolocator = GoogleV3(api_key=api_key)
-    location = geolocator.geocode("Silicon Valley, CA")
+    geolocator = GoogleV3(api_key=GOOGLEV3_API_KEY)
+    location = geolocator.geocode(address)
     if location:
         return location.latitude, location.longitude
     else:
-        print("Location could not be geocoded")
+        st.session_state.logger.error("Location could not be geocoded")
 
 
 def convert_raw_date_to_utc_dt(date_str, latitude, longitude):
     # Parsing the date string
-    date = datetime.strptime(date_str, '%B %d, %Y')
+    date = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S')
 
     # Finding the timezone based on latitude and longitude
     tf = TimezoneFinder()
