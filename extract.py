@@ -3,8 +3,10 @@ import os
 import google.generativeai as genai
 import PIL.Image
 import re
+import json
 from tenacity import retry, wait_random_exponential, stop_after_attempt
-from constants import OPENWEATHER_API_KEY
+
+from constants import OPENWEATHER_API_KEY, DEFAULT_EMBEDDING_MODEL, DEFAULT_LOCAL_VECTOR_STORE
 from utils import *
 
 
@@ -135,7 +137,7 @@ def extract(self_intro, media_file, journal_writing):
         entry['weather_data'] = entry['openweather_response'].data.loc[0]
         entry['timezone'] = entry['openweather_response'].timezone.loc[0]
         entry['user_journal'] = journal_writing
-        entry['generated_journal'] = generate_journal(
+        entry['journal'] = generate_journal(
             self_intro,
             media_file,
             entry.get('metadata'), 
@@ -144,7 +146,7 @@ def extract(self_intro, media_file, journal_writing):
             entry.get('mood_data'),
             entry.get('user_journal')
         )
-        entry['journal_title'] = write_journal_title(entry['generated_journal'])
+        entry['journal_title'] = write_journal_title(entry['journal'])
     else:
         entry['uuid'] = hash(journal_writing)
         entry['media_file'] = None
@@ -169,5 +171,19 @@ def extract(self_intro, media_file, journal_writing):
             entry['weather_data'] = None
             entry['timezone'] = None
             entry['mood_data'] = None
+
     
+    user = st.session_state['user']
+    st.session_state.logger.info(f"Saving journal entry {entry['uuid']} for user {user}")
+    if os.path.exists(f"converted_data/{user.lower()}_journal.json"):
+        with open(f"converted_data/{user.lower()}_journal.json", "r") as f:
+            journals = json.load(f)
+        journals[entry['uuid']] = entry
+        with open(f"converted_data/{user.lower()}_journal.json", "w") as f:
+            json.dump(journals, f, cls=CustomEncoder)
+    else:
+        st.session_state.logger.info("No journal data found for user. Creating one")
+        with open(f"converted_data/{user.lower()}_journal.json", "w") as f:
+            json.dump({entry['uuid']: entry}, f, cls=CustomEncoder)
+
     return entry

@@ -155,6 +155,8 @@ class CustomEncoder(json.JSONEncoder):
             # Convert bytes to a string format, here using base64 to ensure all byte data is accurately encoded
             import base64
             return base64.b64encode(obj).decode('utf-8')
+        elif isinstance(obj, pd.DataFrame):
+            return obj.to_json()
         # Let the base class default method raise the TypeError
         return json.JSONEncoder.default(self, obj)
     

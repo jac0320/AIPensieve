@@ -8,13 +8,13 @@ def display_entry(entry: dict, show_media=False, show_full=False):
 
     st.session_state.logger.info(f"Session {st.session_state.session_id} | Displaying Journal Entry {entry.get('uuid')}")
 
-    if 'user_journal' in entry:
-        with st.chat_message(entry['user_journal'], avatar='📝'):
+    if 'user_journal' in entry and entry['user_journal'] is not None:
+        with st.chat_message(entry.get('user_journal', 'user'), avatar='📝'):
             st.write_stream(stream_data(f"For this memory you wrote: {entry['user_journal']}"))
     
-    if 'generated_journal' in entry:
-        with st.chat_message(entry['generated_journal'], avatar='🧙‍♂️'):
-            st.write_stream(stream_data(f"You memory: {entry['generated_journal']}"))
+    if 'journal' in entry:
+        with st.chat_message(entry['journal'], avatar='🧙‍♂️'):
+            st.write_stream(stream_data(f"You memory: {entry['journal']}"))
 
     if 'media_file' in entry and show_media:
         st.image(f'media/{entry["media_file"]}', use_column_width=True)
