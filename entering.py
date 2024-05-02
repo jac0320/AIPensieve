@@ -5,6 +5,12 @@ import json
 
 from constants import DEFAULT_EMBEDDING_MODEL, DEFAULT_LOCAL_VECTOR_STORE
 
+import sys
+if sys.platform.startswith("linux"):
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import chromadb
 
 def embed_fn(title, text, task_type="retrieval_document"):
