@@ -87,10 +87,10 @@ def retrieve_decision(query):
 
     One says: {query}
 
-    Based on the conversation, do you think it will help to read more diary from the user to better response?
+    Based on the conversation, do you think we already have enough context to response to?
     Answer in json format with key 'decision' and value 'yes' or 'no'.
     """
     st.session_state.logger.info(f"Session {st.session_state.session_id} | Retrieve Decision Prompt: {prompt}")
     response = model.generate_content(prompt)
     st.session_state.logger.info(f"Session {st.session_state.session_id} | Retrieve Decision Response: {response.text}")
-    return ('yes' in response.text.lower()) or ('true' in response.text.lower())
+    return ('no' in response.text.lower()) or ('false' in response.text.lower())

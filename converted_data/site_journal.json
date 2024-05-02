@@ -7727,5 +7727,540 @@
         "user_journal": null,
         "journal": " Today is a beautiful day. The sun is shining brightly and the birds are singing. I'm sitting on the couch with my dog, Tim, and my cat, Gulu. They're both curled up and sleeping soundly. I'm enjoying a cup of coffee and watching the world go by.\n\nI'm so grateful for my life. I have a loving wife, a beautiful home, and two amazing pets. I'm also fortunate to have a good job and a great group of friends. I know that I'm lucky to have all of these things.\n\nI'm not sure what the future holds, but I'm excited to find out. I'm always looking for new challenges and opportunities. I'm also looking forward to starting a family with my wife. I know that we'll be great parents.\n\nI'm so happy with my life right now. I'm grateful for everything that I have. I'm excited to see what the future holds.",
         "journal_title": "Reflections of Gratitude and Anticipation"
+    },
+    "-269280765342593131": {
+        "uuid": -269280765342593131,
+        "media_file": "IMG_0062.jpeg",
+        "metadata": {
+            "GPSInfo": {
+                "GPSLatitudeRef": "N",
+                "GPSLatitude": [
+                    "38.0",
+                    "14.0",
+                    "28.22"
+                ],
+                "GPSLongitudeRef": "W",
+                "GPSLongitude": [
+                    "122.0",
+                    "58.0",
+                    "0.88"
+                ],
+                "GPSAltitudeRef": "AA==",
+                "GPSAltitude": "1.8061141488544443",
+                "GPSTimeStamp": [
+                    "20.0",
+                    "0.0",
+                    "0.0"
+                ],
+                "GPSSpeedRef": "K",
+                "GPSSpeed": "0.0",
+                "GPSImgDirectionRef": "T",
+                "GPSImgDirection": "329.97679112008075",
+                "GPSDestBearingRef": "T",
+                "GPSDestBearing": "329.97679112008075",
+                "GPSDateStamp": "2022:07:17",
+                "GPSHPositioningError": "4.748674744414994"
+            },
+            "ResolutionUnit": 2,
+            "ExifOffset": 226,
+            "Make": "Apple",
+            "Model": "iPhone 12",
+            "Software": "15.5",
+            "Orientation": 1,
+            "DateTime": "2022:07:16 19:09:10",
+            "YCbCrPositioning": 1,
+            "XResolution": "72.0",
+            "YResolution": "72.0",
+            "HostComputer": "iPhone 12",
+            "ExifVersion": "MDIzMg==",
+            "ComponentsConfiguration": "AQIDAA==",
+            "ShutterSpeedValue": "12.30221195113899",
+            "DateTimeOriginal": "2022:07:16 19:09:10",
+            "DateTimeDigitized": "2022:07:16 19:09:10",
+            "ApertureValue": "1.3561438092556088",
+            "BrightnessValue": "9.696463756092502",
+            "ExposureBiasValue": "0.0",
+            "MeteringMode": 5,
+            "Flash": 16,
+            "FocalLength": "4.2",
+            "ColorSpace": 65535,
+            "ExifImageWidth": 4032,
+            "FocalLengthIn35mmFilm": 26,
+            "SceneCaptureType": 0,
+            "OffsetTime": "-07:00",
+            "OffsetTimeOriginal": "-07:00",
+            "OffsetTimeDigitized": "-07:00",
+            "SubsecTimeOriginal": "355",
+            "SubjectLocation": [
+                962,
+                1014,
+                209,
+                208
+            ],
+            "SubsecTimeDigitized": "355",
+            "ExifImageHeight": 3024,
+            "SensingMethod": 2,
+            "ExposureTime": "0.00019798059790140566",
+            "FNumber": "1.6",
+            "SceneType": "AQ==",
+            "ExposureProgram": 2,
+            "ISOSpeedRatings": 50,
+            "ExposureMode": 0,
+            "FlashPixVersion": "MDEwMA==",
+            "WhiteBalance": 0,
+            "LensSpecification": [
+                "1.5499999523160568",
+                "4.2",
+                "1.6",
+                "2.4"
+            ],
+            "LensMake": "Apple",
+            "LensModel": "iPhone 12 back dual wide camera 4.2mm f/1.6",
+            "CompositeImage": 2
+        },
+        "gps_data": {
+            "GPSLatitudeRef": "N",
+            "GPSLatitude": [
+                "38.0",
+                "14.0",
+                "28.22"
+            ],
+            "GPSLongitudeRef": "W",
+            "GPSLongitude": [
+                "122.0",
+                "58.0",
+                "0.88"
+            ],
+            "GPSAltitudeRef": "AA==",
+            "GPSAltitude": "1.8061141488544443",
+            "GPSTimeStamp": [
+                "20.0",
+                "0.0",
+                "0.0"
+            ],
+            "GPSSpeedRef": "K",
+            "GPSSpeed": "0.0",
+            "GPSImgDirectionRef": "T",
+            "GPSImgDirection": "329.97679112008075",
+            "GPSDestBearingRef": "T",
+            "GPSDestBearing": "329.97679112008075",
+            "GPSDateStamp": "2022:07:17",
+            "GPSHPositioningError": "4.748674744414994"
+        },
+        "latitude": 38.241172222222225,
+        "longitude": -122.96691111111112,
+        "location_data": {
+            "place_id": 310087457,
+            "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+            "osm_type": "way",
+            "osm_id": 484667655,
+            "lat": "38.241313720373",
+            "lon": "-122.96733356768247",
+            "class": "highway",
+            "type": "service",
+            "place_rank": 27,
+            "importance": 0.07500999999999991,
+            "addresstype": "road",
+            "name": "Marine View Drive",
+            "display_name": "Marine View Drive, Dillon Beach, Marin County, California, 94953, United States",
+            "address": {
+                "road": "Marine View Drive",
+                "hamlet": "Dillon Beach",
+                "county": "Marin County",
+                "state": "California",
+                "ISO3166-2-lvl4": "US-CA",
+                "postcode": "94953",
+                "country": "United States",
+                "country_code": "us"
+            },
+            "boundingbox": [
+                "38.2348050",
+                "38.2453912",
+                "-122.9693454",
+                "-122.9659405"
+            ]
+        },
+        "utc_dt": "2022-07-17 02:09:10",
+        "openweather_response": "{\"lat\":{\"0\":38.2412},\"lon\":{\"0\":-122.9669},\"timezone\":{\"0\":\"America\\/Los_Angeles\"},\"timezone_offset\":{\"0\":-25200},\"data\":{\"0\":{\"dt\":1658048950,\"sunrise\":1658062923,\"sunset\":1658115216,\"temp\":287.69,\"feels_like\":287.6,\"pressure\":1011,\"humidity\":92,\"dew_point\":286.41,\"clouds\":0,\"wind_speed\":7.8,\"wind_deg\":307,\"weather\":[{\"id\":800,\"main\":\"Clear\",\"description\":\"clear sky\",\"icon\":\"01n\"}]}}}",
+        "weather_data": {
+            "dt": 1658048950,
+            "sunrise": 1658062923,
+            "sunset": 1658115216,
+            "temp": 287.69,
+            "feels_like": 287.6,
+            "pressure": 1011,
+            "humidity": 92,
+            "dew_point": 286.41,
+            "clouds": 0,
+            "wind_speed": 7.8,
+            "wind_deg": 307,
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01n"
+                }
+            ]
+        },
+        "timezone": "America/Los_Angeles",
+        "user_journal": null,
+        "journal": " July 16, 2022\n\nDear Diary,\n\nToday was a perfect day. The sun was shining, the birds were singing, and I was camping with my friends and family. We had a great time hiking, swimming, and fishing. We even roasted marshmallows over the campfire.\n\nI love camping. It's a great way to get back to nature and spend time with the people you love. It's also a lot of fun to rough it for a few days.\n\nI'm so glad I decided to come on this camping trip. It's been a great way to relax and de-stress. I'm already looking forward to my next camping trip.\n\nLove,\n\nSite",
+        "journal_title": "Perfect Day Camping with Loved Ones"
+    },
+    "2056111775266620643": {
+        "uuid": 2056111775266620643,
+        "media_file": "IMG_0136.jpeg",
+        "metadata": {
+            "GPSInfo": {
+                "GPSLatitudeRef": "N",
+                "GPSLatitude": [
+                    "37.0",
+                    "52.0",
+                    "7.07"
+                ],
+                "GPSLongitudeRef": "W",
+                "GPSLongitude": [
+                    "122.0",
+                    "16.0",
+                    "21.44"
+                ],
+                "GPSAltitudeRef": "AA==",
+                "GPSAltitude": "47.12028499580889",
+                "GPSTimeStamp": [
+                    "18.0",
+                    "2.0",
+                    "17.0"
+                ],
+                "GPSSpeedRef": "K",
+                "GPSSpeed": "2.5799999236842206",
+                "GPSImgDirectionRef": "T",
+                "GPSImgDirection": "194.14282128514057",
+                "GPSDestBearingRef": "T",
+                "GPSDestBearing": "14.14282131661442",
+                "GPSDateStamp": "2023:11:19",
+                "GPSHPositioningError": "15.327387529597475"
+            },
+            "ResolutionUnit": 2,
+            "ExifOffset": 244,
+            "Make": "Apple",
+            "Model": "iPhone 12 Pro Max",
+            "Software": "17.1.1",
+            "Orientation": 6,
+            "DateTime": "2023:11:19 10:02:17",
+            "YCbCrPositioning": 1,
+            "XResolution": "72.0",
+            "YResolution": "72.0",
+            "HostComputer": "iPhone 12 Pro Max",
+            "ExifVersion": "MDIzMg==",
+            "ComponentsConfiguration": "AQIDAA==",
+            "ShutterSpeedValue": "6.922439780250739",
+            "DateTimeOriginal": "2023:11:19 10:02:17",
+            "DateTimeDigitized": "2023:11:19 10:02:17",
+            "ApertureValue": "2.2750070478484843",
+            "BrightnessValue": "6.725048916051481",
+            "ExposureBiasValue": "0.0",
+            "MeteringMode": 5,
+            "Flash": 16,
+            "FocalLength": "2.71",
+            "ColorSpace": 65535,
+            "ExifImageWidth": 3088,
+            "FocalLengthIn35mmFilm": 30,
+            "SceneCaptureType": 0,
+            "OffsetTime": "-08:00",
+            "OffsetTimeOriginal": "-08:00",
+            "OffsetTimeDigitized": "-08:00",
+            "SubsecTimeOriginal": "821",
+            "SubsecTimeDigitized": "821",
+            "ExifImageHeight": 2316,
+            "SensingMethod": 2,
+            "ExposureTime": "0.008264462809917356",
+            "FNumber": "2.2",
+            "SceneType": "AQ==",
+            "ExposureProgram": 2,
+            "ISOSpeedRatings": 32,
+            "ExposureMode": 0,
+            "FlashPixVersion": "MDEwMA==",
+            "WhiteBalance": 0,
+            "LensSpecification": [
+                "2.7100000381578897",
+                "2.7100000381578897",
+                "2.2",
+                "2.2"
+            ],
+            "LensMake": "Apple",
+            "LensModel": "iPhone 12 Pro Max front camera 2.71mm f/2.2",
+            "CompositeImage": 2
+        },
+        "gps_data": {
+            "GPSLatitudeRef": "N",
+            "GPSLatitude": [
+                "37.0",
+                "52.0",
+                "7.07"
+            ],
+            "GPSLongitudeRef": "W",
+            "GPSLongitude": [
+                "122.0",
+                "16.0",
+                "21.44"
+            ],
+            "GPSAltitudeRef": "AA==",
+            "GPSAltitude": "47.12028499580889",
+            "GPSTimeStamp": [
+                "18.0",
+                "2.0",
+                "17.0"
+            ],
+            "GPSSpeedRef": "K",
+            "GPSSpeed": "2.5799999236842206",
+            "GPSImgDirectionRef": "T",
+            "GPSImgDirection": "194.14282128514057",
+            "GPSDestBearingRef": "T",
+            "GPSDestBearing": "14.14282131661442",
+            "GPSDateStamp": "2023:11:19",
+            "GPSHPositioningError": "15.327387529597475"
+        },
+        "latitude": 37.868630555555555,
+        "longitude": -122.27262222222222,
+        "location_data": {
+            "place_id": 311976974,
+            "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+            "osm_type": "relation",
+            "osm_id": 14404772,
+            "lat": "37.86705125",
+            "lon": "-122.27137900325931",
+            "class": "amenity",
+            "type": "school",
+            "place_rank": 30,
+            "importance": 0.3289652785939945,
+            "addresstype": "amenity",
+            "name": "Berkeley High School",
+            "display_name": "Berkeley High School, 1980, Allston Way, Downtown Berkeley, Berkeley, Alameda County, California, 94704, United States",
+            "address": {
+                "amenity": "Berkeley High School",
+                "house_number": "1980",
+                "road": "Allston Way",
+                "neighbourhood": "Downtown Berkeley",
+                "city": "Berkeley",
+                "county": "Alameda County",
+                "state": "California",
+                "ISO3166-2-lvl4": "US-CA",
+                "postcode": "94704",
+                "country": "United States",
+                "country_code": "us"
+            },
+            "boundingbox": [
+                "37.8652764",
+                "37.8689423",
+                "-122.2725728",
+                "-122.2695418"
+            ]
+        },
+        "utc_dt": "2023-11-19 18:02:17",
+        "openweather_response": "{\"lat\":{\"0\":37.8686},\"lon\":{\"0\":-122.2726},\"timezone\":{\"0\":\"America\\/Los_Angeles\"},\"timezone_offset\":{\"0\":-28800},\"data\":{\"0\":{\"dt\":1700445737,\"sunrise\":1700405628,\"sunset\":1700441727,\"temp\":285.73,\"feels_like\":284.74,\"pressure\":1026,\"humidity\":65,\"dew_point\":279.33,\"clouds\":19,\"wind_speed\":1.34,\"wind_deg\":28,\"wind_gust\":3.58,\"weather\":[{\"id\":801,\"main\":\"Clouds\",\"description\":\"few clouds\",\"icon\":\"02n\"}]}}}",
+        "weather_data": {
+            "dt": 1700445737,
+            "sunrise": 1700405628,
+            "sunset": 1700441727,
+            "temp": 285.73,
+            "feels_like": 284.74,
+            "pressure": 1026,
+            "humidity": 65,
+            "dew_point": 279.33,
+            "clouds": 19,
+            "wind_speed": 1.34,
+            "wind_deg": 28,
+            "wind_gust": 3.58,
+            "weather": [
+                {
+                    "id": 801,
+                    "main": "Clouds",
+                    "description": "few clouds",
+                    "icon": "02n"
+                }
+            ]
+        },
+        "timezone": "America/Los_Angeles",
+        "user_journal": null,
+        "journal": " Half Marathon\n\nToday, I ran my first half marathon. It was a tough race, but I finished it! I'm so proud of myself.\n\nI started training for this race in January. I ran every day, and I gradually increased my distance. The longest run I did before the race was 10 miles.\n\nI was nervous about the race, but I was also excited. I knew that I could do it.\n\nThe race started at 7 am. It was a beautiful day, and the sun was shining. I felt good when I started running. The first few miles were easy, but then the race started to get harder. The hills were especially challenging.\n\nAt mile 10, I started to feel really tired. I wanted to give up, but I kept going. I knew that I was almost there.\n\nI finally reached the finish line after 2 hours and 32 minutes. I was exhausted, but I was also exhilarated. I had finished my first half marathon!\n\nI'm so proud of myself for accomplishing this goal. It was a lot of hard work, but it was worth it. I learned that I can do anything I set my mind to.\n\nI'm grateful for the support of my family and friends. They helped me train for this race, and they were there to cheer me on race day.\n\nI'm also grateful for the opportunity to run this race. It was a great experience, and I'm so glad that I was able to do it.\n\nI'm not sure what my next running goal will be, but I know that I want to keep running. I love the feeling of accomplishment that I get from running. It's a great way to stay healthy and clear my head.\n\nI'm a big believer in setting goals and working hard to achieve them. If you have a goal, don't give up on it. Keep going, and you will eventually achieve it.",
+        "journal_title": "My Half Marathon Journey: From Training to Triumph"
+    },
+    "-4272798572568898947": {
+        "uuid": -4272798572568898947,
+        "media_file": "IMG_0803.jpeg",
+        "metadata": {
+            "GPSInfo": {
+                "GPSLatitudeRef": "N",
+                "GPSLatitude": [
+                    "37.0",
+                    "19.0",
+                    "48.16"
+                ],
+                "GPSLongitudeRef": "W",
+                "GPSLongitude": [
+                    "121.0",
+                    "53.0",
+                    "20.13"
+                ],
+                "GPSAltitudeRef": "AA==",
+                "GPSAltitude": "29.69203722854188",
+                "GPSTimeStamp": [
+                    "0.0",
+                    "32.0",
+                    "15.0"
+                ],
+                "GPSSpeedRef": "K",
+                "GPSSpeed": "0.0",
+                "GPSImgDirectionRef": "T",
+                "GPSImgDirection": "156.23205574912893",
+                "GPSDestBearingRef": "T",
+                "GPSDestBearing": "336.2320557491289",
+                "GPSDateStamp": "2024:03:18",
+                "GPSHPositioningError": "14.246706915477498"
+            },
+            "ResolutionUnit": 2,
+            "ExifOffset": 244,
+            "Make": "Apple",
+            "Model": "iPhone 12 Pro Max",
+            "Software": "17.3.1",
+            "Orientation": 6,
+            "DateTime": "2024:03:17 17:32:16",
+            "YCbCrPositioning": 1,
+            "XResolution": "72.0",
+            "YResolution": "72.0",
+            "HostComputer": "iPhone 12 Pro Max",
+            "ExifVersion": "MDIzMg==",
+            "ComponentsConfiguration": "AQIDAA==",
+            "ShutterSpeedValue": "7.609358719333144",
+            "DateTimeOriginal": "2024:03:17 17:32:16",
+            "DateTimeDigitized": "2024:03:17 17:32:16",
+            "ApertureValue": "2.2750070478484843",
+            "BrightnessValue": "7.579516202969075",
+            "ExposureBiasValue": "0.0",
+            "MeteringMode": 5,
+            "Flash": 16,
+            "FocalLength": "2.71",
+            "ColorSpace": 65535,
+            "ExifImageWidth": 3088,
+            "FocalLengthIn35mmFilm": 30,
+            "SceneCaptureType": 0,
+            "OffsetTime": "-07:00",
+            "OffsetTimeOriginal": "-07:00",
+            "OffsetTimeDigitized": "-07:00",
+            "SubsecTimeOriginal": "114",
+            "SubsecTimeDigitized": "114",
+            "ExifImageHeight": 2316,
+            "SensingMethod": 2,
+            "ExposureTime": "0.005128205128205128",
+            "FNumber": "2.2",
+            "SceneType": "AQ==",
+            "ExposureProgram": 2,
+            "ISOSpeedRatings": 25,
+            "ExposureMode": 0,
+            "FlashPixVersion": "MDEwMA==",
+            "WhiteBalance": 0,
+            "LensSpecification": [
+                "2.7100000381578897",
+                "2.7100000381578897",
+                "2.2",
+                "2.2"
+            ],
+            "LensMake": "Apple",
+            "LensModel": "iPhone 12 Pro Max front camera 2.71mm f/2.2",
+            "CompositeImage": 2
+        },
+        "gps_data": {
+            "GPSLatitudeRef": "N",
+            "GPSLatitude": [
+                "37.0",
+                "19.0",
+                "48.16"
+            ],
+            "GPSLongitudeRef": "W",
+            "GPSLongitude": [
+                "121.0",
+                "53.0",
+                "20.13"
+            ],
+            "GPSAltitudeRef": "AA==",
+            "GPSAltitude": "29.69203722854188",
+            "GPSTimeStamp": [
+                "0.0",
+                "32.0",
+                "15.0"
+            ],
+            "GPSSpeedRef": "K",
+            "GPSSpeed": "0.0",
+            "GPSImgDirectionRef": "T",
+            "GPSImgDirection": "156.23205574912893",
+            "GPSDestBearingRef": "T",
+            "GPSDestBearing": "336.2320557491289",
+            "GPSDateStamp": "2024:03:18",
+            "GPSHPositioningError": "14.246706915477498"
+        },
+        "latitude": 37.33004444444445,
+        "longitude": -121.888925,
+        "location_data": {
+            "place_id": 311070409,
+            "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+            "osm_type": "way",
+            "osm_id": 1153917987,
+            "lat": "37.3301378",
+            "lon": "-121.88893509359903",
+            "class": "leisure",
+            "type": "garden",
+            "place_rank": 30,
+            "importance": 9.99999999995449e-06,
+            "addresstype": "leisure",
+            "name": "",
+            "display_name": "West San Carlos Street, SoFA, San Jose, Santa Clara County, California, 95113, United States",
+            "address": {
+                "road": "West San Carlos Street",
+                "neighbourhood": "SoFA",
+                "city": "San Jose",
+                "county": "Santa Clara County",
+                "state": "California",
+                "ISO3166-2-lvl4": "US-CA",
+                "postcode": "95113",
+                "country": "United States",
+                "country_code": "us"
+            },
+            "boundingbox": [
+                "37.3300908",
+                "37.3302194",
+                "-121.8889984",
+                "-121.8889130"
+            ]
+        },
+        "utc_dt": "2024-03-18 00:32:16",
+        "openweather_response": "{\"lat\":{\"0\":37.33},\"lon\":{\"0\":-121.8889},\"timezone\":{\"0\":\"America\\/Los_Angeles\"},\"timezone_offset\":{\"0\":-25200},\"data\":{\"0\":{\"dt\":1710747136,\"sunrise\":1710771193,\"sunset\":1710814658,\"temp\":283.56,\"feels_like\":282.56,\"pressure\":1020,\"humidity\":73,\"dew_point\":278.93,\"clouds\":0,\"visibility\":10000,\"wind_speed\":1.34,\"wind_deg\":30,\"wind_gust\":1.79,\"weather\":[{\"id\":800,\"main\":\"Clear\",\"description\":\"clear sky\",\"icon\":\"01n\"}]}}}",
+        "weather_data": {
+            "dt": 1710747136,
+            "sunrise": 1710771193,
+            "sunset": 1710814658,
+            "temp": 283.56,
+            "feels_like": 282.56,
+            "pressure": 1020,
+            "humidity": 73,
+            "dew_point": 278.93,
+            "clouds": 0,
+            "visibility": 10000,
+            "wind_speed": 1.34,
+            "wind_deg": 30,
+            "wind_gust": 1.79,
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01n"
+                }
+            ]
+        },
+        "timezone": "America/Los_Angeles",
+        "user_journal": null,
+        "journal": " Today was an amazing day! I attended the NVIDIA GTC conference in San Jose, California. It was a great opportunity to learn about the latest advancements in artificial intelligence and to network with other experts in the field.\n\nI was particularly interested in the talks about self-driving cars and natural language processing. I'm working on a project that uses AI to help people with disabilities communicate, and I think these technologies could have a big impact on our work.\n\nIt was also great to meet so many other people who are passionate about AI. I made some new friends and I'm looking forward to staying in touch with them and collaborating on future projects.\n\nI'm so glad I had the opportunity to attend the NVIDIA GTC conference. It was a truly inspiring experience.\n\nAfter the conference, I took a walk around downtown San Jose. It was a beautiful day and the weather was perfect. I stopped for lunch at a little cafe and then I walked around the park.\n\nI enjoyed watching the ducks swim in the pond and I even saw a few squirrels playing in the trees. It was a relaxing and peaceful way to end the day.\n\nI'm so grateful for the opportunity to have attended the NVIDIA GTC conference. It was a truly inspiring experience. I learned so much and I made some new friends. I'm excited to see what the future holds for AI and I'm confident that it will have a positive impact on the world.",
+        "journal_title": "An AI-Filled Day: NVIDIA GTC Conference and the Charms of San Jose"
     }
 }

@@ -10,7 +10,6 @@ from constants import OPENWEATHER_API_KEY, DEFAULT_EMBEDDING_MODEL, DEFAULT_LOCA
 from utils import *
 
 
-
 def generate_journal(
     personal_intro, 
     filestream=None, 
@@ -54,13 +53,10 @@ def generate_journal(
 
     prompt += """    
     Based on the all above information and the picture provided, can you write a personal journal. 
-    Don't mention anything related to technical data provided above.
-    Understand what is in the pictutre in the journal. It is okay to keep the imagination open. 
-    Be creative, personal, and realistic. 
+    Understand what are in the picture when writing the journal and make sure the journal writing surrounds the picture.
+    Be personal, intimate, and realistic with the writing.
     """
     
-    st.session_state.logger.info(f"Session {st.session_state.session_id} | Journal Writing Prompt: {prompt}")
-
     if filestream:
         img = PIL.Image.open(filestream)
         vision_model = genai.GenerativeModel('gemini-pro-vision')
@@ -69,6 +65,8 @@ def generate_journal(
         language_model = genai.GenerativeModel('gemini-pro')
         response = language_model.generate_content([prompt])
 
+    st.session_state.logger.info(f"Session {st.session_state.session_id} | Journal Writing Prompt: {prompt}")
+    st.session_state.logger.info(f"Session {st.session_state.session_id} | Journal Writing Response: {response.text}")
     return response.text
 
 
@@ -82,6 +80,7 @@ def write_journal_title(journal):
     language_model = genai.GenerativeModel('gemini-pro')
     response = language_model.generate_content(prompt)
     st.session_state.logger.info(f"Session {st.session_state.session_id} | Journal Title Generation Prompt: {prompt}")
+    st.session_state.logger.info(f"Session {st.session_state.session_id} | Journal Title Generation Response: {response.text}")
     return response.text
 
 

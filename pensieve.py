@@ -128,13 +128,14 @@ def main():
         collection = client.get_collection(name=user)
 
         for msg in st.session_state.chat_history:
-            with st.chat_message(msg['role'], avatar="😀" if msg['role'] == "user" else "🧙‍♂️"):
+            with st.chat_message(msg['role'], avatar=msg['avatar'] if 'avatar' in msg else '🧙‍♂️'):
                 st.write(msg['content'])
         
         if query := st.chat_input("Query"):
             st.session_state.logger.info(f"Session {st.session_state.session_id} | Query: {query}")
-            st.session_state.chat_history.append({"role": "user", "content": query})
-            with st.chat_message("user", avatar=choose_emoji(query)):
+            emoji = choose_emoji(query)
+            st.session_state.chat_history.append({"role": "user", 'avatar': emoji, "content": query})
+            with st.chat_message("user", avatar=emoji):
                 st.write(query)
 
             # try to see if the conversation requires more information
@@ -144,7 +145,7 @@ def main():
                 prompt = ""
                 for i in range(len(results['ids'][0])):
                     prompt += f"Given the journals below: {results['documents'][0][i]} \n {str(results['metadatas'][0][i])} \n\n"
-                prompt += f"Responde to {query} through recreating a vivid memory based on the above information. "
+                prompt += f"Responde to {query} through describing a vivid memory based on the above information."
             else:
                 prompt = query
             

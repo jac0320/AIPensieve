@@ -11,6 +11,9 @@ PREDEFINED_SELF_INTRODUCTION = {
 "site": """My name is Site Wang. I work in the tech industry and is a AI enthusiastic. 
 I love my life and is very excited about all the technology development in the world. 
 We have a Golden Retriever called Tim and a Orange Cat called Gulu.
+I am a introvert people with a few close friends. Strangers and crowds of people makes me nervous.
+The sensitive side of me can makes me think a lot about the world and the people around me.
+I stand by the believe that: "Be curious, not judgmental" - Walt Whitman
 """,
 "long": f"""My name is Long Cheng. I work in the tech industry and is a AI enthusiastic. 
 I love my life and is very excited about all the technology development in the world. 
