@@ -51,13 +51,13 @@ def main():
 
     st.title('Pensieve 🧙‍♂️')
 
-    user_category = st.selectbox(label="User", options=['Site', 'Long', 'Random', 'You'], index=0)
+    user_category = st.selectbox(label="User", options=['Site', 'Alex', 'Random', 'You'], index=0)
 
     if user_category.lower() in PREDEFINED_SELF_INTRODUCTION:
         user = user_category
     elif user_category.lower() == 'random':
         if 'user' in st.session_state:
-            if st.session_state['user'] in ['Site', 'Long']:
+            if st.session_state['user'] in ['Site', 'Alex']:
                 user = Faker().name().split(' ')[0]
             else:
                 user = st.session_state['user']
